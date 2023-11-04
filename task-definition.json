@@ -12,7 +12,13 @@
           "protocol": "tcp"
         }
       ],
-      "essential": true
+      "essential": true,
+      "environmentFiles": [
+        {
+          "value": "arn:aws:s3:::tmp.bucket.cebasypia.com/.env",
+          "type": "s3"
+        }
+      ]
     }
   ],
   "runtimePlatform": {
