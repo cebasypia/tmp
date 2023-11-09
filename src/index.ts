@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 app.get("/", (req: Request, res: Response) => res.send("Hello, World!"));
 
 app.post("/aiCompletion", async (req, res) => {
+  console.log(req.body);
   const data = req.body;
   const messages: OpenAI.ChatCompletionMessage[] = [
     { role: "user", content: data?.message },
